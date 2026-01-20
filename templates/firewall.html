@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🛡 Firewall Rules</h2>
+
+<form method="POST">
+    <input name="website" placeholder="example.com" required>
+    <select name="action">
+        <option value="block">BLOCK</option>
+        <option value="allow">ALLOW</option>
+    </select>
+    <button>Add Rule</button>
+</form>
+
+<table>
+{% for r in rules %}
+<tr>
+    <td>{{ r.website }}</td>
+    <td>{{ r.action }}</td>
+    <td><a href="/toggle/{{ r.id }}">Toggle</a></td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

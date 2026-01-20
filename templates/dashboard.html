@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔥 Firewall Dashboard</h2>
+
+<div class="card">Total Rules: {{ stats.rules }}</div>
+<div class="card">Blocked Traffic: {{ stats.blocked }}</div>
+<div class="card">Allowed Traffic: {{ stats.allowed }}</div>
+
+<canvas id="trafficChart"></canvas>
+
+<script>
+new Chart(document.getElementById("trafficChart"), {
+    type: 'doughnut',
+    data: {
+        labels: ['Blocked', 'Allowed'],
+        datasets: [{
+            data: [{{ stats.blocked }}, {{ stats.allowed }}],
+        }]
+    }
+});
+</script>
+
+{% endblock %}

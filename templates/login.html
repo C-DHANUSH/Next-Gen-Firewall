@@ -1,0 +1,46 @@
+<style>
+ .body{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(117, 179, 226);
+ }
+ .inner{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+ }
+ .login{
+  border: 2px solid rgb(58, 63, 64);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 100px;
+  background-color: #1bb4e2;
+
+ }
+ .login h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+ }
+ .login input{
+  margin: 10px;
+ }
+ .login button{
+  display: flex;
+  justify-content: center;
+ }
+</style>
+<div class="body">
+  <div class="inner">
+    <div class="login">
+      <form method="post">
+        <h2>Login</h2>
+        <input name="username" placeholder="Username" required><br>
+        <input name="password" type="password" placeholder="Password" required><br>
+        <button type="submit">Login</button> <br>
+        <a href="/register">Register</a>
+    </form>
+    </div>
+  </div>
+
+</div>
+

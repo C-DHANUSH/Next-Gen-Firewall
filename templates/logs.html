@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📜 Live Firewall Logs</h2>
+
+<div id="logBox" class="card"></div>
+
+<script src="{{ url_for('static', filename='js/logs.js') }}"></script>
+
+{% endblock %}
